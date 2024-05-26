@@ -5,13 +5,10 @@ import numpy as np
 
 st.set_page_config(page_title="We Empowher", page_icon=":sparkles:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-df = pd.read_csv("extract_mail.csv")
-
-
-DATA_URL = ("extract_mail.csv")
+DATA_URL = ("data/extract_mail.xlsx")
 
 def load_data(nrows):
-    data = pd.read_csv(DATA_URL, nrows=nrows)
+    data = pd.read_excel(DATA_URL, nrows=nrows)
     lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
     return data
