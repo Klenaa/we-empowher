@@ -7,4 +7,17 @@ st.set_page_config(page_title="We Empowher", page_icon=":sparkles:", layout="cen
 st.title("Dashboard")
 
 df = pd.read_csv("extract_mail.csv")
-# st.dataframe(df)
+
+DATE_COLUMN = 'date/time'
+DATA_URL = ("extract_mail.csv")
+
+def load_data(nrows):
+    data = pd.read_csv(DATA_URL, nrows=nrows)
+    lowercase = lambda x: str(x).lower()
+    data.rename(lowercase, axis='columns', inplace=True)
+    return data
+
+data_load_state = st.text('Loading data...')
+data = load_data(10000)
+
+data_load_state.text('Loading data...done!')
