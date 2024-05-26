@@ -4,11 +4,10 @@ import numpy as np
 
 
 st.set_page_config(page_title="We Empowher", page_icon=":sparkles:", layout="centered", initial_sidebar_state="auto", menu_items=None)
-st.title("Dashboard")
 
 df = pd.read_csv("extract_mail.csv")
 
-DATE_COLUMN = 'date/time'
+
 DATA_URL = ("extract_mail.csv")
 
 def load_data(nrows):
