@@ -40,6 +40,25 @@ st.markdown('*First*: i know')
 st.header("here is a header")
 
 selection_column, disp_col = st.columns(2)
-max_depth = selection_column.slider("What should be the max", min_value = 10, max_value=100)
-variable = selection_column.selectbox('How Many tree should be used ?', option = [100,200,300, "No Limits"])
-input_feature = selection_column.text_input("question" )
+
+col1, col2 = st.columns([1,2])
+
+col1.markdown(" #Welcome to my app!")
+
+# function: file_uploader
+# .success("")
+
+# progress bar : .progress(0)
+
+col2.progress(0)
+for perc_completed in range(100):
+    time.sleep(0.005)
+    progress_bar.progress(perc_completed +1)
+
+col2.success("ALRIGHT ! ")
+
+col2.metric(label="# of Mails", value = "566k", delta = "3 °C")
+
+
+with st.expender("click to read more"):
+    st.write("Helllo, some details")
