@@ -51,10 +51,7 @@ col1.markdown(" #Welcome to my app!")
 
 # progress bar : .progress(0)
 
-col2.progress(0)
-for perc_completed in range(100):
-    # time.sleep(0.005)
-    st.progress_bar.progress(perc_completed +1)
+
 
 col2.success("ALRIGHT ! ")
 
