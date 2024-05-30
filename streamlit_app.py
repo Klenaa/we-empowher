@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-header = st.beta_container()
-dataset = st.beta_container()
-features = st.beta_container()
-modelTraining = st.beta_container()
+header = st.write()
+
 
 st.set_page_config(page_title="We Empowher", page_icon=":sparkles:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
@@ -41,7 +39,7 @@ st.markdown('*First*: i know')
 with model_training:
     st.header("here is a header")
 
-    selection_column, disp_col = st.beta_columns(2)
+    selection_column, disp_col = st.columns(2)
     max_depth = selection_column.slider("What should be the max", min_value = 10, max_value=100)
     variable = selection_column.selectbox('How Many tree should be used ?', option = [100,200,300, "No Limits"])
     input_feature = selection_column.text_input("question" )
